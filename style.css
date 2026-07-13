@@ -1,0 +1,235 @@
+/* ============================================
+   SAYLLON RIBEIRO BARBEARIA — Premium Style
+   Paleta: Roxo + Rosa + Dourado
+   ============================================ */
+
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+    --bg:#07070a;
+    --bg-card:rgba(255,255,255,.025);
+    --border:rgba(255,255,255,.06);
+    --text:#e8e6e3;
+    --text-secondary:#999;
+    --text-muted:#555;
+    --purple:#6b21a8;
+    --pink:#d946ef;
+    --gold:#d4af37;
+    --grad-purple:linear-gradient(135deg,#6b21a8,#a855f7);
+    --grad-gold:linear-gradient(135deg,#92400e,#d97706);
+    --grad-primary:linear-gradient(135deg,#6b21a8,#d946ef);
+    --radius:12px;
+    --radius-lg:16px;
+    --font:'Inter',sans-serif;
+    --font-display:'Playfair Display',Georgia,serif;
+}
+html{scroll-behavior:smooth}
+body{
+    font-family:var(--font);
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+.container{max-width:1160px;margin:0 auto;padding:0 1.5rem}
+
+/* ===== HEADER ===== */
+.header{
+    position:fixed;top:0;left:0;right:0;z-index:1000;
+    transition:background .3s,box-shadow .3s;
+}
+.header--scrolled{background:rgba(7,7,10,.92);backdrop-filter:blur(24px);box-shadow:0 1px 0 var(--border)}
+.header__inner{display:flex;align-items:center;justify-content:space-between;height:68px}
+.header__logo{display:flex;align-items:center;gap:10px;font-size:.95rem;font-weight:700;color:#fff}
+.header__logo span{background:var(--grad-primary);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.nav{display:flex;gap:2rem;align-items:center}
+.nav__link{font-size:.78rem;color:var(--text-muted);transition:color .3s;font-weight:500;letter-spacing:.4px}
+.nav__link:hover{color:#fff}
+.nav__cta{
+    padding:.4rem 1.1rem;border-radius:100px;
+    background:var(--grad-primary);color:#fff!important;
+    font-weight:600;font-size:.75rem;text-transform:uppercase;letter-spacing:.8px;
+}
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
+.hamburger span{display:block;width:22px;height:2px;background:#fff;border-radius:2px;transition:transform .3s,opacity .3s}
+
+/* ===== HERO ===== */
+.hero{position:relative;min-height:95vh;display:flex;align-items:center;padding:120px 0 60px;overflow:hidden}
+.hero__bg{
+    position:absolute;inset:0;
+    background:
+        radial-gradient(ellipse 70% 50% at 50% -10%, rgba(107,33,168,.08) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 40% at 80% 80%, rgba(217,70,239,.04) 0%, transparent 50%),
+        radial-gradient(ellipse 40% 40% at 20% 70%, rgba(212,175,55,.02) 0%, transparent 50%);
+    pointer-events:none;
+}
+.hero__content{position:relative;z-index:1}
+.hero__badge{display:inline-block;padding:5px 14px;border-radius:100px;background:rgba(107,33,168,.1);color:var(--purple);font-size:.65rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:1.5rem}
+.hero__title{font-family:var(--font-display);font-size:clamp(2.8rem,7vw,5.5rem);font-weight:700;line-height:1.05;color:#fff;margin-bottom:.6rem}
+.hero__title-highlight{background:var(--grad-primary);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero__subtitle{font-size:1rem;color:var(--text-secondary);max-width:480px;line-height:1.7;margin-bottom:2rem}
+.hero__cta{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:3rem}
+.btn{
+    display:inline-flex;align-items:center;gap:.5rem;
+    padding:.75rem 1.6rem;border-radius:100px;
+    font-size:.78rem;font-weight:600;letter-spacing:.7px;
+    text-transform:uppercase;transition:all .3s;cursor:pointer;
+    border:none;font-family:var(--font);
+}
+.btn--primary{background:var(--grad-primary);color:#fff}
+.btn--primary:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(107,33,168,.3)}
+.btn--outline{background:transparent;border:1px solid var(--border);color:var(--text-secondary)}
+.btn--outline:hover{border-color:var(--purple);color:#fff}
+.btn--whatsapp{background:#25D366!important;color:#fff!important}
+.btn--whatsapp:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(37,211,102,.2)}
+.hero__stats{display:flex;gap:3rem;flex-wrap:wrap}
+.stat{display:flex;flex-direction:column}
+.stat__num{font-size:1.5rem;font-weight:800;color:#fff}
+.stat__label{font-size:.68rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:1px}
+
+/* ===== SECTIONS GERAIS ===== */
+.section__tag{display:inline-block;padding:4px 12px;border-radius:100px;background:rgba(107,33,168,.06);color:var(--purple);font-size:.6rem;font-weight:600;letter-spacing:2px;margin-bottom:.8rem;text-transform:uppercase}
+.section__title{font-family:var(--font-display);font-size:clamp(1.5rem,3vw,2.4rem);color:#fff;margin-bottom:.5rem;text-align:center}
+.section__desc{color:var(--text-secondary);max-width:450px;margin:0 auto;font-size:.85rem;text-align:center}
+
+/* ===== SOBRE ===== */
+.sobre{padding:80px 0}
+.sobre__grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+.sobre__text{color:var(--text-secondary);font-size:.88rem;line-height:1.8;margin-bottom:1rem}
+.sobre__diferenciais{display:flex;gap:8px;flex-wrap:wrap;margin-top:1rem}
+.sobre__diferenciais span{
+    padding:4px 12px;border-radius:100px;
+    background:rgba(107,33,168,.06);border:1px solid rgba(107,33,168,.1);
+    font-size:.7rem;color:var(--purple);font-weight:500;
+}
+.sobre__visual{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.sobre__card{
+    background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);
+    padding:2rem;text-align:center;
+}
+.sobre__card .sobre__icon{font-size:2.2rem;margin-bottom:.5rem}
+.sobre__card h3{font-size:.9rem;color:#fff;margin-bottom:.3rem}
+.sobre__card p{font-size:.75rem;color:var(--text-muted)}
+/* ===== SERVICOS ===== */
+.servicos{padding:80px 0}
+.servicos__grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:1rem}
+.servico-card{
+    background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);
+    padding:1.5rem;text-align:center;transition:all .3s;
+}
+.servico-card:hover{transform:translateY(-3px);border-color:rgba(107,33,168,.1);box-shadow:0 12px 40px rgba(0,0,0,.3)}
+.servico-card__icon{font-size:2rem;margin-bottom:.5rem}
+.servico-card h3{font-size:.82rem;color:#fff;font-weight:700;margin-bottom:.3rem}
+.servico-card p{font-size:.72rem;color:var(--text-muted);line-height:1.6;margin-bottom:.6rem}
+.servico-card__preco{display:inline-block;padding:3px 14px;border-radius:100px;background:var(--grad-primary);color:#fff;font-size:.75rem;font-weight:700}
+/* ===== UNIDADES ===== */
+.unidades{padding:80px 0}
+.unidades__grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;margin-top:1.5rem}
+.unidade-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;transition:all .3s}
+.unidade-card:hover{transform:translateY(-3px);border-color:rgba(107,33,168,.1)}
+.unidade-card__header{padding:1rem 1.5rem;background:rgba(107,33,168,.04);border-bottom:1px solid var(--border)}
+.unidade-card__badge{font-size:.65rem;color:var(--purple);font-weight:600;letter-spacing:1px;text-transform:uppercase}
+.unidade-card__body{padding:1.5rem}
+.unidade-card__body h3{font-size:1rem;color:#fff;margin-bottom:.3rem}
+.unidade-card__end{font-size:.8rem;color:var(--text-secondary);line-height:1.6}
+.unidade-card__info{display:flex;flex-direction:column;gap:4px;margin-top:.8rem}
+.unidade-card__info span{font-size:.72rem;color:var(--text-muted)}
+.unidade-card__actions{padding:0 1.5rem 1.2rem;display:flex;flex-direction:column;gap:8px}
+/* ===== DEPOIMENTOS ===== */
+.depoimentos{padding:80px 0}
+.depoimentos__grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.2rem}
+.depoimento-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.5rem}
+.depoimento__stars{color:var(--gold);font-size:.9rem;letter-spacing:2px;margin-bottom:.5rem}
+.depoimento__text{font-size:.82rem;color:var(--text-secondary);line-height:1.7;font-style:italic;margin-bottom:.8rem}
+.depoimento__autor{display:flex;justify-content:space-between;align-items:center}
+.depoimento__nome{font-size:.75rem;color:#fff;font-weight:600}
+.depoimento__fonte{font-size:.6rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:1px}
+/* ===== GALERIA ===== */
+.galeria{padding:80px 0}
+.galeria__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.galeria__item{aspect-ratio:1;border-radius:var(--radius);overflow:hidden}
+.galeria__placeholder{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:3rem}
+/* ===== CONTATO ===== */
+.contato{padding:80px 0}
+.contato__card{max-width:520px;margin:0 auto;text-align:center;background:rgba(107,33,168,.02);border:1px solid rgba(107,33,168,.08);border-radius:24px;padding:3rem 2rem}
+.contato__title{font-family:var(--font-display);font-size:clamp(1.3rem,3vw,1.8rem);color:#fff;margin-bottom:.6rem}
+.contato__title .highlight{background:var(--grad-primary);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.contato__desc{color:var(--text-secondary);font-size:.82rem;margin-bottom:1.5rem}
+.contato__buttons{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap;margin-bottom:1rem}
+.contato__social{margin-top:.5rem}
+.social-link{color:var(--purple);font-size:.78rem;font-weight:500;transition:color .3s}
+.social-link:hover{color:var(--pink)}
+/* ===== FOOTER ===== */
+.footer{padding:40px 0;border-top:1px solid var(--border);text-align:center}
+.footer__inner{display:flex;flex-direction:column;align-items:center;gap:12px}
+.footer__brand{display:flex;align-items:center;gap:8px;font-size:.9rem;font-weight:700;color:#fff}
+.footer__unidades{display:flex;gap:1.5rem;flex-wrap:wrap;justify-content:center}
+.footer__unidades span{font-size:.72rem;color:var(--text-muted)}
+.footer__links{display:flex;gap:1.2rem;flex-wrap:wrap;justify-content:center}
+.footer__links a{color:var(--text-muted);font-size:.7rem;transition:color .3s}
+.footer__links a:hover{color:#fff}
+.footer__copy{color:#2a2a2a;font-size:.65rem;margin-top:4px}
+/* ===== MODAL AGENDAMENTO ===== */
+.booking-overlay{position:fixed;inset:0;z-index:2000;background:rgba(0,0,0,.7);backdrop-filter:blur(8px);display:none;align-items:center;justify-content:center;padding:1rem}
+.booking-overlay.active{display:flex}
+.booking-modal{background:#0d0d12;border:1px solid var(--border);border-radius:20px;width:100%;max-width:500px;max-height:85vh;overflow-y:auto;padding:2rem;position:relative}
+.booking-modal__close{position:absolute;top:1rem;right:1rem;background:none;border:none;color:#888;font-size:1.2rem;cursor:pointer;width:36px;height:36px;display:flex;align-items:center;justify-content:center;border-radius:50%;transition:all .3s}
+.booking-modal__close:hover{background:rgba(255,255,255,.05);color:#fff}
+.booking-modal__header{text-align:center;margin-bottom:1.5rem}
+.booking-modal__header h2{font-family:var(--font-display);font-size:1.3rem;color:#fff;margin-bottom:.3rem}
+.booking-modal__header p{font-size:.78rem;color:var(--text-muted)}
+.booking-step{padding:.5rem 0}
+.booking-step__label{font-size:.6rem;color:var(--purple);text-transform:uppercase;letter-spacing:2px;font-weight:600}
+.booking-step h3{font-size:.95rem;color:#fff;margin:.3rem 0 .8rem}
+.booking-opcoes{display:grid;gap:6px}
+.booking-opcao{display:flex;align-items:center;gap:12px;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:12px 14px;cursor:pointer;transition:all .2s;text-align:left;font-family:var(--font);width:100%}
+.booking-opcao:hover{border-color:rgba(107,33,168,.2);background:rgba(107,33,168,.03)}
+.booking-opcao.selected{border-color:var(--purple);background:rgba(107,33,168,.08)}
+.opcao-emoji{font-size:1.3rem;width:32px;text-align:center}
+.opcao-nome{font-size:.8rem;color:#fff;font-weight:500;flex:1}
+.opcao-preco{font-size:.72rem;color:var(--purple);font-weight:700}
+.booking-input{width:100%;padding:10px 14px;border-radius:var(--radius);border:1px solid var(--border);background:var(--bg-card);color:#fff;font-family:var(--font);font-size:.85rem;margin-bottom:.8rem}
+.booking-input:focus{outline:none;border-color:var(--purple)}
+.booking-horarios{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}
+.booking-horario{padding:8px;border-radius:8px;border:1px solid var(--border);background:var(--bg-card);color:var(--text-secondary);font-size:.75rem;cursor:pointer;transition:all .2s;font-family:var(--font)}
+.booking-horario:hover{border-color:rgba(107,33,168,.2)}
+.booking-horario.selected{background:rgba(107,33,168,.12);border-color:var(--purple);color:var(--purple);font-weight:600}
+.booking-resumo{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:1rem}
+.resumo-linha{display:flex;justify-content:space-between;padding:6px 0;font-size:.78rem;color:var(--text-secondary);border-bottom:1px solid rgba(255,255,255,.04)}
+.resumo-linha:last-child{border:none}
+.resumo-total{font-size:.85rem;color:#fff;font-weight:700;padding-top:10px;margin-top:4px;border-top:1px solid var(--border)!important}
+.booking-nav{display:flex;align-items:center;justify-content:space-between;margin-top:1rem;gap:1rem}
+.booking-nav__back{background:none;border:none;color:var(--text-muted);font-size:.78rem;cursor:pointer;font-family:var(--font)}
+.booking-nav__back:hover{color:#fff}
+.booking-dots{display:flex;gap:6px}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--border);transition:background .3s}
+.dot.active{background:var(--purple)}
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){
+    .nav{display:none;position:fixed;top:68px;left:0;right:0;background:rgba(7,7,10,.96);backdrop-filter:blur(24px);flex-direction:column;padding:1rem 1.5rem;border-bottom:1px solid var(--border)}
+    .nav--open{display:flex}
+    .nav__link{padding:.8rem 0;font-size:.82rem;border-bottom:1px solid rgba(255,255,255,.02)}
+    .nav__cta{width:100%;text-align:center}
+    .hamburger{display:flex}
+    .hero{min-height:auto;padding:100px 0 40px}
+    .hero__stats{gap:1.5rem}
+    .sobre__grid{grid-template-columns:1fr;gap:2rem}
+    .sobre__visual{grid-template-columns:1fr 1fr}
+    .galeria__grid{grid-template-columns:repeat(2,1fr)}
+    .booking-horarios{grid-template-columns:repeat(4,1fr)}
+}
+@media(max-width:480px){
+    .header__logo{font-size:.82rem}
+    .hero__title{font-size:2.2rem}
+    .hero__cta{flex-direction:column}
+    .hero__cta .btn{width:100%;justify-content:center}
+    .servicos__grid{grid-template-columns:1fr 1fr}
+    .unidades__grid{grid-template-columns:1fr}
+    .galeria__grid{grid-template-columns:1fr 1fr}
+    .sobre__visual{grid-template-columns:1fr}
+    .footer__unidades{flex-direction:column;gap:4px}
+    .contato__buttons{flex-direction:column}
+    .contato__buttons .btn{width:100%;justify-content:center}
+    .booking-horarios{grid-template-columns:repeat(3,1fr)}
+    .booking-modal{padding:1.2rem}
+}

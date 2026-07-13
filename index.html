@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sayllon Ribeiro Barbearia — Premium</title>
+    <meta name="description" content="Barbearia premium em Campo Grande - MS. Duas unidades: Vila Margarida e Orla. Agende seu horário!">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header class="header" id="header">
+        <div class="header__inner container">
+            <a href="/" class="header__logo">
+                <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
+                    <circle cx="15" cy="15" r="15" fill="url(#logo-grad)"/>
+                    <path d="M9 21V9h4c2 0 3.4.5 4.3 1.5s1.4 2.3 1.4 4c0 1.8-.5 3.2-1.4 4.2S15 21 13 21H9zm2.6-3h1.8c.7 0 1.3-.3 1.7-.8s.6-1.2.6-2.2-.2-1.6-.6-2.1c-.4-.5-1-.7-1.8-.7h-1.7v5.8z" fill="#fff"/>
+                    <defs><linearGradient id="logo-grad" x1="0" y1="0" x2="30" y2="30"><stop stop-color="#6b21a8"/><stop offset="1" stop-color="#d946ef"/></linearGradient></defs>
+                </svg>
+                <span class="header__logo-text">Sayllon <span>Ribeiro</span></span>
+            </a>
+            <nav class="nav" id="nav">
+                <a href="#sobre" class="nav__link">Sobre</a>
+                <a href="#servicos" class="nav__link">Serviços</a>
+                <a href="#unidades" class="nav__link">Unidades</a>
+                <a href="#contato" class="nav__link">Contato</a>
+                <a href="#" onclick="openBookingModal();return false" class="nav__link nav__cta">Agendar</a>
+            </nav>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="hero">
+        <div class="hero__bg"></div>
+        <div class="hero__content container">
+            <span class="hero__badge">💈 CAMPO GRANDE - MS</span>
+            <h1 class="hero__title">
+                Sayllon<br>
+                <span class="hero__title-highlight">Ribeiro</span>
+            </h1>
+            <p class="hero__subtitle">Barbearia premium com duas unidades em Campo Grande. Tradição, estilo e um atendimento que faz a diferença.</p>
+            <div class="hero__cta">
+                <a href="#" onclick="openBookingModal();return false" class="btn btn--primary">Agende seu Horário</a>
+                <a href="https://wa.me/5567993227005" target="_blank" class="btn btn--whatsapp">📱 WhatsApp</a>
+            </div>
+            <div class="hero__stats">
+                <div class="stat"><span class="stat__num">★ 4.9</span><span class="stat__label">Avaliação</span></div>
+                <div class="stat"><span class="stat__num">2</span><span class="stat__label">Unidades</span></div>
+                <div class="stat"><span class="stat__num">🏳️</span><span class="stat__label">Inclusivo</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SOBRE ===== -->
+    <section class="sobre" id="sobre">
+        <div class="container">
+            <div class="sobre__grid">
+                <div class="sobre__content">
+                    <span class="section__tag">SOBRE</span>
+                    <h2 class="section__title" style="text-align:left">Mais que uma barbearia,<br>uma experiência</h2>
+                    <p class="sobre__text">Na Sayllon Ribeiro, cada corte é pensado nos mínimos detalhes. Somos uma barbearia que acolhe todo mundo — com respeito, estilo e profissionalismo.</p>
+                    <p class="sobre__text">Empresa de empreendedoras, acessível e orgulhosamente inclusiva. Aqui, você encontra o melhor da barbearia tradicional com um toque moderno.</p>
+                    <div class="sobre__diferenciais">
+                        <span>♿ Acessível</span>
+                        <span>🏳️ LGBTQ+ Friendly</span>
+                        <span>👩‍💼 Empreendedoras</span>
+                        <span>📍 2 Unidades</span>
+                    </div>
+                </div>
+                <div class="sobre__visual">
+                    <div class="sobre__card">
+                        <div class="sobre__icon">💈</div>
+                        <h3>+5 Anos</h3>
+                        <p>De experiência em Campo Grande</p>
+                    </div>
+                    <div class="sobre__card">
+                        <div class="sobre__icon">✂️</div>
+                        <h3>Estilo Único</h3>
+                        <p>Cada cliente tem seu próprio visual</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SERVIÇOS ===== -->
+    <section class="servicos" id="servicos">
+        <div class="container">
+            <div class="section__header">
+                <span class="section__tag">SERVIÇOS</span>
+                <h2 class="section__title">O que oferecemos</h2>
+                <p class="section__desc">Serviços premium com profissionais experientes.</p>
+            </div>
+            <div class="servicos__grid">
+                <div class="servico-card">
+                    <div class="servico-card__icon">✂️</div>
+                    <h3>Corte Masculino</h3>
+                    <p>Corte personalizado com tesoura e máquina, finalização com produtos premium.</p>
+                    <span class="servico-card__preco">R$ 55</span>
+                </div>
+                <div class="servico-card">
+                    <div class="servico-card__icon">🧔</div>
+                    <h3>Barba Completa</h3>
+                    <p>Aparar, modelar e hidratar. Navalha, pincel e toalha quente.</p>
+                    <span class="servico-card__preco">R$ 45</span>
+                </div>
+                <div class="servico-card">
+                    <div class="servico-card__icon">🔥</div>
+                    <h3>Corte + Barba</h3>
+                    <p>Nosso combo mais popular. Corte + barba com finalização premium.</p>
+                    <span class="servico-card__preco">R$ 85</span>
+                </div>
+                <div class="servico-card">
+                    <div class="servico-card__icon">💆</div>
+                    <h3>Hidratação</h3>
+                    <p>Tratamento capilar com produtos profissionais. Cabelos saudáveis e brilhantes.</p>
+                    <span class="servico-card__preco">R$ 40</span>
+                </div>
+                <div class="servico-card">
+                    <div class="servico-card__icon">👦</div>
+                    <h3>Corte Infantil</h3>
+                    <p>Corte infantil com paciência e carinho. Ambiente lúdico e acolhedor.</p>
+                    <span class="servico-card__preco">R$ 40</span>
+                </div>
+                <div class="servico-card">
+                    <div class="servico-card__icon">✨</div>
+                    <h3>Combo Completo</h3>
+                    <p>Corte + barba + hidratação + sobrancelha. Transformação completa.</p>
+                    <span class="servico-card__preco">R$ 120</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== UNIDADES ===== -->
+    <section class="unidades" id="unidades">
+        <div class="container">
+            <div class="section__header">
+                <span class="section__tag">UNIDADES</span>
+                <h2 class="section__title">Duas unidades em CG</h2>
+                <p class="section__desc">Escolha a mais perto de você.</p>
+            </div>
+            <div class="unidades__grid">
+                <div class="unidade-card">
+                    <div class="unidade-card__header">
+                        <span class="unidade-card__badge">📍 Vila Margarida</span>
+                    </div>
+                    <div class="unidade-card__body">
+                        <h3>Unidade Vila Margarida</h3>
+                        <p class="unidade-card__end"><strong>R. Navirai, 324</strong> — Vila Margarida</p>
+                        <p class="unidade-card__end">Campo Grande - MS, 79023-162</p>
+                        <div class="unidade-card__info">
+                            <span>🕐 Seg–Sex: 08h–19h | Sáb: 08h–17h</span>
+                            <span>♿ Entrada acessível</span>
+                        </div>
+                    </div>
+                    <div class="unidade-card__actions">
+                        <a href="https://wa.me/5567993227005" target="_blank" class="btn btn--whatsapp" style="width:100%;justify-content:center">📱 WhatsApp</a>
+                        <a href="https://www.google.com/maps/place/Sayllon+Ribeiro+Barbearia/@-20.4344623,-54.608586,15z" target="_blank" class="btn btn--outline" style="width:100%;justify-content:center">🗺️ Ver no Maps</a>
+                    </div>
+                </div>
+
+                <div class="unidade-card">
+                    <div class="unidade-card__header">
+                        <span class="unidade-card__badge">📍 Orla Morena</span>
+                    </div>
+                    <div class="unidade-card__body">
+                        <h3>Unidade Orla</h3>
+                        <p class="unidade-card__end"><strong>R. Antônio Maria Coelho, 584</strong> — Orla Morena</p>
+                        <p class="unidade-card__end">Campo Grande - MS</p>
+                        <div class="unidade-card__info">
+                            <span>🕐 Seg–Sex: 08h–19h | Sáb: 08h–17h</span>
+                            <span>♿ Entrada acessível</span>
+                        </div>
+                    </div>
+                    <div class="unidade-card__actions">
+                        <a href="https://wa.me/5567993227005" target="_blank" class="btn btn--whatsapp" style="width:100%;justify-content:center">📱 WhatsApp</a>
+                        <a href="https://www.google.com/maps/search/Sayllon+Ribeiro+Barbearia+Orla/" target="_blank" class="btn btn--outline" style="width:100%;justify-content:center">🗺️ Ver no Maps</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== DEPOIMENTOS ===== -->
+    <section class="depoimentos" id="depoimentos">
+        <div class="container">
+            <div class="section__header">
+                <span class="section__tag">AVALIAÇÕES</span>
+                <h2 class="section__title">O que dizem os clientes</h2>
+            </div>
+            <div class="depoimentos__grid">
+                <div class="depoimento-card">
+                    <div class="depoimento__stars">★★★★★</div>
+                    <p class="depoimento__text">"Melhor barbearia de Campo Grande! Atendimento nota 10, ambiente super agradável. Saí de lá me sentindo um novo homem."</p>
+                    <div class="depoimento__autor">
+                        <span class="depoimento__nome">Lucas M.</span>
+                        <span class="depoimento__fonte">Google ★4.9</span>
+                    </div>
+                </div>
+                <div class="depoimento-card">
+                    <div class="depoimento__stars">★★★★★</div>
+                    <p class="depoimento__text">"Lugar incrível! Profissionais muito talentosos e o ambiente é super acolhedor. Recomendo demais!"</p>
+                    <div class="depoimento__autor">
+                        <span class="depoimento__nome">Rafael S.</span>
+                        <span class="depoimento__fonte">Google ★4.9</span>
+                    </div>
+                </div>
+                <div class="depoimento-card">
+                    <div class="depoimento__stars">★★★★★</div>
+                    <p class="depoimento__text">"Adoro que é um espaço inclusivo e profissional. Me suito bem atendido sempre. O combo corte + barba é imperdível!"</p>
+                    <div class="depoimento__autor">
+                        <span class="depoimento__nome">Gabriel A.</span>
+                        <span class="depoimento__fonte">Google ★4.9</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== GALERIA ===== -->
+    <section class="galeria" id="galeria">
+        <div class="container">
+            <div class="section__header">
+                <span class="section__tag">GALERIA</span>
+                <h2 class="section__title">Nosso trabalho</h2>
+                <p class="section__desc">Siga @sayllonbarbeariacg no Instagram para ver mais!</p>
+            </div>
+            <div class="galeria__grid">
+                <div class="galeria__item" style="--g:1">
+                    <div class="galeria__placeholder" style="background:var(--grad-purple)">
+                        <span>💈</span>
+                    </div>
+                </div>
+                <div class="galeria__item" style="--g:2">
+                    <div class="galeria__placeholder" style="background:var(--grad-gold)">
+                        <span>✂️</span>
+                    </div>
+                </div>
+                <div class="galeria__item" style="--g:3">
+                    <div class="galeria__placeholder" style="background:var(--grad-rose)">
+                        <span>🧔</span>
+                    </div>
+                </div>
+                <div class="galeria__item" style="--g:4">
+                    <div class="galeria__placeholder" style="background:var(--grad-purple)">
+                        <span>🔥</span>
+                    </div>
+                </div>
+                <div class="galeria__item" style="--g:5">
+                    <div class="galeria__placeholder" style="background:var(--grad-gold)">
+                        <span>💆</span>
+                    </div>
+                </div>
+                <div class="galeria__item" style="--g:6">
+                    <div class="galeria__placeholder" style="background:var(--grad-rose)">
+                        <span>🏳️</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== UNIDADES ===== -->
+    <section class="unidades" id="unidades">
+        <div class="container">
+            <div class="section__header">
+                <span class="section__tag">UNIDADES</span>
+                <h2 class="section__title">Duas unidades em CG</h2>
+                <p class="section__desc">Escolha a mais perto de voce.</p>
+            </div>
+            <div class="unidades__grid">
+                <div class="unidade-card">
+                    <div class="unidade-card__header">
+                        <span class="unidade-card__badge">Vila Margarida</span>
+                    </div>
+                    <div class="unidade-card__body">
+                        <h3>Unidade Vila Margarida</h3>
+                        <p class="unidade-card__end"><strong>R. Navirai, 324</strong> - Vila Margarida</p>
+                        <p class="unidade-card__end">Campo Grande - MS, 79023-162</p>
+                        <div class="unidade-card__info">
+                            <span>Seg-Sex: 08h-19h | Sab: 08h-17h</span>
+                            <span>Acessivel</span>
+                        </div>
+                    </div>
+                    <div class="unidade-card__actions">
+                        <a href="https://wa.me/5567993227005" target="_blank" class="btn btn--whatsapp" style="width:100%;justify-content:center">WhatsApp</a>
+                        <a href="https://www.google.com/maps/place/Sayllon+Ribeiro+Barbearia/@-20.4344623,-54.608586,15z" target="_blank" class="btn btn--outline" style="width:100%;justify-content:center">Ver no Maps</a>
+                    </div>
+                </div>
+
+                <div class="unidade-card">
+                    <div class="unidade-card__header">
+                        <span class="unidade-card__badge">Orla Morena</span>
+                    </div>
+                    <div class="unidade-card__body">
+                        <h3>Unidade Orla</h3>
+                        <p class="unidade-card__end"><strong>R. Antonio Maria Coelho, 584</strong> - Orla Morena</p>
+                        <p class="unidade-card__end">Campo Grande - MS</p>
+                        <div class="unidade-card__info">
+                            <span>Seg-Sex: 08h-19h | Sab: 08h-17h</span>
+                            <span>Acessivel</span>
+                        </div>
+                    </div>
+                    <div class="unidade-card__actions">
+                        <a href="https://wa.me/5567993227005" target="_blank" class="btn btn--whatsapp" style="width:100%;justify-content:center">WhatsApp</a>
+                        <a href="https://www.google.com/maps/search/Sayllon+Ribeiro+Barbearia+Orla/" target="_blank" class="btn btn--outline" style="width:100%;justify-content:center">Ver no Maps</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== DEPOIMENTOS ===== -->
+    <section class="depoimentos" id="depoimentos">
+        <div class="container">
+            <div class="section__header">
+                <span class="section__tag">AVALIACOES</span>
+                <h2 class="section__title">O que dizem os clientes</h2>
+            </div>
+            <div class="depoimentos__grid">
+                <div class="depoimento-card">
+                    <div class="depoimento__stars">*****</div>
+                    <p class="depoimento__text">"Melhor barbearia de Campo Grande! Atendimento nota 10, ambiente super agradavel."</p>
+                    <div class="depoimento__autor">
+                        <span class="depoimento__nome">Lucas M.</span>
+                        <span class="depoimento__fonte">Google 4.9</span>
+                    </div>
+                </div>
+                <div class="depoimento-card">
+                    <div class="depoimento__stars">*****</div>
+                    <p class="depoimento__text">"Lugar incrivel! Profissionais muito talentosos e o ambiente super acolhedor."</p>
+                    <div class="depoimento__autor">
+                        <span class="depoimento__nome">Rafael S.</span>
+                        <span class="depoimento__fonte">Google 4.9</span>
+                    </div>
+                </div>
+                <div class="depoimento-card">
+                    <div class="depoimento__stars">*****</div>
+                    <p class="depoimento__text">"Adoro que e um espaco inclusivo e profissional. Me sinto bem atendido sempre."</p>
+                    <div class="depoimento__autor">
+                        <span class="depoimento__nome">Gabriel A.</span>
+                        <span class="depoimento__fonte">Google 4.9</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== GALERIA ===== -->
+    <section class="galeria" id="galeria">
+        <div class="container">
+            <div class="section__header">
+                <span class="section__tag">GALERIA</span>
+                <h2 class="section__title">Nosso trabalho</h2>
+                <p class="section__desc">Siga @sayllonbarbeariacg no Instagram para ver mais!</p>
+            </div>
+            <div class="galeria__grid">
+                <div class="galeria__item"><div class="galeria__placeholder" style="background:linear-gradient(135deg,#6b21a8,#a855f7)"><span>💈</span></div></div>
+                <div class="galeria__item"><div class="galeria__placeholder" style="background:linear-gradient(135deg,#92400e,#d97706)"><span>✂️</span></div></div>
+                <div class="galeria__item"><div class="galeria__placeholder" style="background:linear-gradient(135deg,#9d174d,#db2777)"><span>🧔</span></div></div>
+                <div class="galeria__item"><div class="galeria__placeholder" style="background:linear-gradient(135deg,#4c1d95,#7c3aed)"><span>🔥</span></div></div>
+                <div class="galeria__item"><div class="galeria__placeholder" style="background:linear-gradient(135deg,#78350f,#d97706)"><span>💆</span></div></div>
+                <div class="galeria__item"><div class="galeria__placeholder" style="background:linear-gradient(135deg,#831843,#ec4899)"><span>🏳️</span></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTATO ===== -->
+    <section class="contato" id="contato">
+        <div class="container">
+            <div class="contato__card">
+                <h2 class="contato__title">Vem fazer um <span class="highlight">corte</span> com a gente</h2>
+                <p class="contato__desc">Agende pelo WhatsApp ou direto pelo site. A gente te espera!</p>
+                <div class="contato__buttons">
+                    <a href="https://wa.me/5567993227005" target="_blank" class="btn btn--whatsapp">📱 (67) 99322-7005</a>
+                    <a href="#" onclick="openBookingModal();return false" class="btn btn--primary">📅 Agendar Online</a>
+                </div>
+                <div class="contato__social">
+                    <a href="https://www.instagram.com/sayllonbarbeariacg/" target="_blank" class="social-link">📸 @sayllonbarbeariacg</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__brand">
+                    <svg width="22" height="22" viewBox="0 0 30 30" fill="none">
+                        <circle cx="15" cy="15" r="15" fill="url(#logo-grad-f)"/>
+                        <path d="M9 21V9h4c2 0 3.4.5 4.3 1.5s1.4 2.3 1.4 4c0 1.8-.5 3.2-1.4 4.2S15 21 13 21H9zm2.6-3h1.8c.7 0 1.3-.3 1.7-.8s.6-1.2.6-2.2-.2-1.6-.6-2.1c-.4-.5-1-.7-1.8-.7h-1.7v5.8z" fill="#fff"/>
+                        <defs><linearGradient id="logo-grad-f" x1="0" y1="0" x2="30" y2="30"><stop stop-color="#6b21a8"/><stop offset="1" stop-color="#d946ef"/></linearGradient></defs>
+                    </svg>
+                    <span>Sayllon Ribeiro</span>
+                </div>
+                <div class="footer__unidades">
+                    <span>📍 R. Navirai, 324 — Vila Margarida</span>
+                    <span>📍 R. Antônio Maria Coelho, 584 — Orla</span>
+                </div>
+                <div class="footer__links">
+                    <a href="#sobre">Sobre</a>
+                    <a href="#servicos">Serviços</a>
+                    <a href="#unidades">Unidades</a>
+                    <a href="#contato">Contato</a>
+                    <a href="https://wa.me/5567993227005">WhatsApp</a>
+                </div>
+                <p class="footer__copy">© 2026 Sayllon Ribeiro Barbearia — Site por EcoSites</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== MODAL AGENDAMENTO ===== -->
+    <div class="booking-overlay" id="bookingOverlay" onclick="closeBookingModal(event)">
+        <div class="booking-modal" onclick="event.stopPropagation()">
+            <button class="booking-modal__close" onclick="closeBookingModal()">✕</button>
+            <div class="booking-modal__header">
+                <h2>Agende seu Horário</h2>
+                <p>Escolha o serviço, unidade e horário ideal</p>
+            </div>
+
+            <div class="booking-steps" id="bookingSteps">
+                <!-- Step 1 -->
+                <div class="booking-step" data-step="1">
+                    <span class="booking-step__label">Etapa 1 de 4</span>
+                    <h3>Escolha o serviço</h3>
+                    <div class="booking-opcoes" id="servicoOptions">
+                        <button class="booking-opcao" data-value="corte" data-preco="55"><span class="opcao-emoji">✂️</span><span class="opcao-nome">Corte Masculino</span><span class="opcao-preco">R$ 55</span></button>
+                        <button class="booking-opcao" data-value="barba" data-preco="45"><span class="opcao-emoji">🧔</span><span class="opcao-nome">Barba Completa</span><span class="opcao-preco">R$ 45</span></button>
+                        <button class="booking-opcao" data-value="combo-corte-barba" data-preco="85"><span class="opcao-emoji">🔥</span><span class="opcao-nome">Corte + Barba</span><span class="opcao-preco">R$ 85</span></button>
+                        <button class="booking-opcao" data-value="hidratacao" data-preco="40"><span class="opcao-emoji">💆</span><span class="opcao-nome">Hidratação</span><span class="opcao-preco">R$ 40</span></button>
+                        <button class="booking-opcao" data-value="corte-infantil" data-preco="40"><span class="opcao-emoji">👦</span><span class="opcao-nome">Corte Infantil</span><span class="opcao-preco">R$ 40</span></button>
+                        <button class="booking-opcao" data-value="combo-completo" data-preco="120"><span class="opcao-emoji">✨</span><span class="opcao-nome">Combo Completo</span><span class="opcao-preco">R$ 120</span></button>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="booking-step" data-step="2" style="display:none">
+                    <span class="booking-step__label">Etapa 2 de 4</span>
+                    <h3>Escolha a unidade</h3>
+                    <div class="booking-opcoes" id="unidadeOptions">
+                        <button class="booking-opcao" data-value="vila-margarida"><span class="opcao-emoji">📍</span><span class="opcao-nome">Vila Margarida</span><span class="opcao-preco">R. Navirai, 324</span></button>
+                        <button class="booking-opcao" data-value="orla"><span class="opcao-emoji">📍</span><span class="opcao-nome">Orla Morena</span><span class="opcao-preco">R. Antônio Maria Coelho, 584</span></button>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="booking-step" data-step="3" style="display:none">
+                    <span class="booking-step__label">Etapa 3 de 4</span>
+                    <h3>Escolha a data e horário</h3>
+                    <input type="date" id="bookingDate" class="booking-input" min="">
+                    <div class="booking-horarios" id="horariosContainer">
+                        <button class="booking-horario" data-time="08:00">08:00</button>
+                        <button class="booking-horario" data-time="09:00">09:00</button>
+                        <button class="booking-horario" data-time="10:00">10:00</button>
+                        <button class="booking-horario" data-time="11:00">11:00</button>
+                        <button class="booking-horario" data-time="13:00">13:00</button>
+                        <button class="booking-horario" data-time="14:00">14:00</button>
+                        <button class="booking-horario" data-time="15:00">15:00</button>
+                        <button class="booking-horario" data-time="16:00">16:00</button>
+                        <button class="booking-horario" data-time="17:00">17:00</button>
+                        <button class="booking-horario" data-time="18:00">18:00</button>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="booking-step" data-step="4" style="display:none">
+                    <span class="booking-step__label">Etapa 4 de 4</span>
+                    <h3>Revisar e Confirmar</h3>
+                    <div class="booking-resumo" id="bookingResumo">
+                        <div class="resumo-linha"><span>Serviço</span><span id="resServico">—</span></div>
+                        <div class="resumo-linha"><span>Unidade</span><span id="resUnidade">—</span></div>
+                        <div class="resumo-linha"><span>Data</span><span id="resData">—</span></div>
+                        <div class="resumo-linha"><span>Horário</span><span id="resHora">—</span></div>
+                        <div class="resumo-linha resumo-total"><span>Valor</span><span id="resPreco">R$ 0</span></div>
+                    </div>
+                    <a id="bookingConfirmBtn" href="#" target="_blank" class="btn btn--whatsapp" style="width:100%;justify-content:center;margin-top:1rem">📤 Confirmar via WhatsApp</a>
+                </div>
+            </div>
+
+            <div class="booking-nav">
+                <button class="booking-nav__back" id="bookingBack" style="display:none" onclick="prevBookingStep()">← Voltar</button>
+                <span class="booking-dots" id="bookingDots">
+                    <span class="dot active"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
