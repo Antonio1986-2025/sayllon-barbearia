@@ -7,6 +7,23 @@ document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.getElementById('hamburger');
     const nav = document.getElementById('nav');
 
+    // Scroll Reveal
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const delay = entry.target.dataset.revealDelay;
+                if (delay) {
+                    setTimeout(() => entry.target.classList.add('revealed'), parseInt(delay));
+                } else {
+                    entry.target.classList.add('revealed');
+                }
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('[data-reveal]').forEach(el => revealObserver.observe(el));
+
     // Header scroll
     window.addEventListener('scroll', () => {
         header.classList.toggle('header--scrolled', window.scrollY > 80);
