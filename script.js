@@ -123,8 +123,8 @@ function prevBookingStep() {
 }
 
 // Step 1: Select servico
-document.addEventListener('click', e => {
-    const btn = e.target.closest('#servicoOptions .booking-opcao');
+document.getElementById('servicoOptions')?.addEventListener('click', e => {
+    const btn = e.target.closest('.booking-opcao');
     if (!btn) return;
     document.querySelectorAll('#servicoOptions .booking-opcao').forEach(b => b.classList.remove('selected'));
     btn.classList.add('selected');
@@ -134,8 +134,8 @@ document.addEventListener('click', e => {
 });
 
 // Step 2: Select unidade
-document.addEventListener('click', e => {
-    const btn = e.target.closest('#unidadeOptions .booking-opcao');
+document.getElementById('unidadeOptions')?.addEventListener('click', e => {
+    const btn = e.target.closest('.booking-opcao');
     if (!btn) return;
     document.querySelectorAll('#unidadeOptions .booking-opcao').forEach(b => b.classList.remove('selected'));
     btn.classList.add('selected');
@@ -144,7 +144,7 @@ document.addEventListener('click', e => {
 });
 
 // Step 3: Date + time
-document.addEventListener('click', e => {
+document.getElementById('horariosContainer')?.addEventListener('click', e => {
     const btn = e.target.closest('.booking-horario');
     if (!btn) return;
     document.querySelectorAll('.booking-horario').forEach(b => b.classList.remove('selected'));
@@ -177,7 +177,7 @@ if (horariosContainer) {
 }
 
 // Fix: also trigger on click
-document.addEventListener('click', e => {
+document.getElementById('horariosContainer')?.addEventListener('click', e => {
     const btn = e.target.closest('.booking-horario');
     if (btn && bookingState.data && currentStep === 3) {
         setTimeout(checkStep3Complete, 50);
